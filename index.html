@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+	<style>
+	.myDiv {
+		border: 5px outset red;
+		background-color: lightblue;    
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel" src="./loaded-component.js"></script>
+	
+    <script type="text/babel">
+      function Application() {
+              /*  Initial State */
+        let [VCC, setVCC] = React.useState(5);
+        let [VBB, setVBB] = React.useState(5);
+        let [IBSat, setIBSat] = React.useState(0);
+        let [ICSat, setICSat] = React.useState(0);
+        let [VLoad, setVLoad] = React.useState(0);
+        let [VBE, setVBE] = React.useState(0.7);
+        let [VCESat, setVCESat] = React.useState(0.9);
+
+        
+        return (
+          <div className="myDiv">
+            <label htmlFor="fname">VCC:</label><br/>
+  			<input type="text" id="fname" name="fname" value={VCC} onChange={e => setVCC(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">VBB:</label><br/>
+  			<input type="text" id="fname" name="fname" value={VBB} onChange={e => setVBB(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">IB<sub>sat</sub>:</label><br/>
+  			<input type="text" id="fname" name="fname" value={IBSat} onChange={e => setIBSat(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">IC<sub>sat</sub>:</label><br/>
+  			<input type="text" id="fname" name="fname" value={ICSat} onChange={e => setICSat(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">V<sub>load</sub>:</label><br/>
+  			<input type="text" id="fname" name="fname" value={VLoad} onChange={e => setVLoad(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">VBE:</label><br/>
+  			<input type="text" id="fname" name="fname" value={VBE} onChange={e => setVBE(e.target.value)}/>
+            <br/>
+            <label htmlFor="fname">VCE(sat):</label><br/>
+  			<input type="text" id="fname" name="fname" value={VCESat} onChange={e => setVCESat(e.target.value)}/>
+            <br/>
+            <p>R<sub>B</sub> = (VBB - VBE) / IB<sub>sat</sub> = ({VBB} - {VBE}) / {IBSat} = {(VBB - VBE) / IBSat}Ω</p>
+            <p>R<sub>C</sub> = (VCC - V<sub>load</sub> - VCE<sub>sat</sub>) / IC<sub>sat</sub> = ({VCC} - {VLoad} - {VCESat}) / {ICSat} = {(VCC - VLoad - VCESat) / ICSat}Ω</p>
+          </div>
+        )
+      }
+	  ReactDOM.createRoot(document.getElementById('app')).render(<Application />);
+    </script>
+    <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+    <!-- https://unpkg.com/react@18.2.0/umd/react.production.min.js -->
+    <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+    <!-- https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</body>
+</html>
