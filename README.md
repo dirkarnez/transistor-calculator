@@ -9,3 +9,6 @@ positive checking
 
 Ie
  power check
+
+### Reference
+- [三极管应用，控制一个LED灯的开关 - YouTube](https://www.youtube.com/watch?v=1XvOQBLePhE)
