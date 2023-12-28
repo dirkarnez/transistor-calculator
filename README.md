@@ -1,5 +1,5 @@
-transistor-calculator
-=====================
+[transistor-calculator](https://dirkarnez.github.io/transistor-calculator)
+==========================================================================
 operating voltage
 operating_current
 5 - VBE(sat) - target IB * Rb - ie * resistance so to ensure operating current and voltage = 0 (0.66666666666)
