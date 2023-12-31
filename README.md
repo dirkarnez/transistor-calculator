@@ -12,6 +12,8 @@ Ie
 ### Notes
 - Switch
    - IC value is the maximum limit when IB and VCE are in saturation region. (e.g. VCE will still be in satuated region if pick a smaller IC for saturation)
+      - for cases like current sensitive components like LED
+         - ![](led.jpg)
 
 ### Reference
 - [三极管应用，控制一个LED灯的开关 - YouTube](https://www.youtube.com/watch?v=1XvOQBLePhE)
