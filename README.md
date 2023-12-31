@@ -9,6 +9,9 @@ positive checking
 
 Ie
  power check
+### Notes
+- Switch
+   - IC value is the maximum limit when IB and VCE are in saturation region
 
 ### Reference
 - [三极管应用，控制一个LED灯的开关 - YouTube](https://www.youtube.com/watch?v=1XvOQBLePhE)
